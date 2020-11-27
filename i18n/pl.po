@@ -1,0 +1,99 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* account_analytic_project_integration
+#
+# Translators:
+# DanielDemedziuk <daniel.demedziuk@mjgroup.pl>, 2020
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-27 12:18+0000\n"
+"PO-Revision-Date: 2020-11-27 12:18+0000\n"
+"Last-Translator: DanielDemedziuk <daniel.demedziuk@mjgroup.pl>, 2020\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_analytic_project_integration
+#: model:ir.model.fields,field_description:account_analytic_project_integration.field_account_analytic_account__type
+msgid "Account type"
+msgstr "Rodzaj konta"
+
+#. module: account_analytic_project_integration
+#: model:ir.model,name:account_analytic_project_integration.model_account_analytic_account
+msgid "Analytic Account"
+msgstr "Konto analityczne"
+
+#. module: account_analytic_project_integration
+#: selection:account.analytic.account,type:0
+msgid "Analytic account"
+msgstr "Konto analityczne"
+
+#. module: account_analytic_project_integration
+#: selection:account.analytic.account,type:0
+msgid "Analytic view"
+msgstr "Widok analityczny"
+
+#. module: account_analytic_project_integration
+#: model:ir.model.fields,field_description:account_analytic_project_integration.field_account_analytic_account__company_id
+msgid "Company"
+msgstr "Firma"
+
+#. module: account_analytic_project_integration
+#: model:ir.model.fields,field_description:account_analytic_project_integration.field_account_analytic_account__manager_id
+msgid "Contract manager"
+msgstr "Menedżer kontraktu"
+
+#. module: account_analytic_project_integration
+#: selection:account.analytic.account,type:0
+msgid "Contract or Project"
+msgstr "Umowa lub Projekt"
+
+#. module: account_analytic_project_integration
+#: selection:account.analytic.account,type:0
+msgid "Contract template"
+msgstr "Szablon umowy"
+
+#. module: account_analytic_project_integration
+#: model:ir.model.fields,field_description:account_analytic_project_integration.field_account_analytic_account__notes
+msgid "Notes"
+msgstr "Notatki"
+
+#. module: account_analytic_project_integration
+#: model:ir.model.fields,help:account_analytic_project_integration.field_account_analytic_account__date_stop
+msgid "Project completion date."
+msgstr "Data zakończenia projektu."
+
+#. module: account_analytic_project_integration
+#: model:ir.model.fields,help:account_analytic_project_integration.field_account_analytic_account__type
+msgid "Select the appropriate type for this analytical account."
+msgstr "Wybierz odpowiedni typ dla tego konta analitycznego."
+
+#. module: account_analytic_project_integration
+#: model:ir.model.fields,help:account_analytic_project_integration.field_account_analytic_account__notes
+msgid "Space for a short note, description, project tasks."
+msgstr "Miejsce na krótką notatkę, opis, zadania projektu."
+
+#. module: account_analytic_project_integration
+#: model:ir.model.fields,field_description:account_analytic_project_integration.field_account_analytic_account__date_start
+msgid "Start date"
+msgstr "Data rozpoczęcia"
+
+#. module: account_analytic_project_integration
+#: model:ir.model.fields,help:account_analytic_project_integration.field_account_analytic_account__date_start
+msgid "Start date of the project."
+msgstr "Data rozpoczęcia projektu."
+
+#. module: account_analytic_project_integration
+#: model:ir.model.fields,field_description:account_analytic_project_integration.field_account_analytic_account__date_stop
+msgid "Stop date"
+msgstr "Data zakończenia"
+
+#. module: account_analytic_project_integration
+#: model:ir.model.fields,help:account_analytic_project_integration.field_account_analytic_account__manager_id
+msgid "The manager responsible for this contract."
+msgstr "Menedżer odpowiedzialny za ten kontrakt."
+
