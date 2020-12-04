@@ -7,14 +7,14 @@
             <field name="model">account.analytic.account</field>
             <field name="inherit_id" ref="analytic.view_account_analytic_account_form"/>
             <field name="arch" type="xml">
-                <xpath expr="/form/*" position="before">
-                    <header>
-                        <button name="action_pending" string="To Renew" type="object" attrs="{'invisible': [('state', 'not in', ['open'])]}"/>
-                        <button name="action_close" string="Closed" type="object" attrs="{'invisible': [('state', 'not in', ['open', 'pending'])]}"/>
-                        <button name="action_cancelled" string="Cancelled" type="object" attrs="{'invisible': [('state', 'not in', ['open', 'pending'])]}"/>
-                        <field name="state" widget="statusbar" statusbar_visible="open,pending,close"/>
-                    </header>
-                </xpath>
+<!--                <xpath expr="/form/*" position="before">-->
+<!--                    <header>-->
+<!--                        <button name="action_pending" string="To Renew" type="object" attrs="{'invisible': [('state', 'not in', ['open'])]}"/>-->
+<!--                        <button name="action_close" string="Closed" type="object" attrs="{'invisible': [('state', 'not in', ['open', 'pending'])]}"/>-->
+<!--                        <button name="action_cancelled" string="Cancelled" type="object" attrs="{'invisible': [('state', 'not in', ['open', 'pending'])]}"/>-->
+<!--                        <field name="state" widget="statusbar" statusbar_visible="open,pending,close"/>-->
+<!--                    </header>-->
+<!--                </xpath>-->
 
                 <group name="main">
                     <group>

@@ -9,9 +9,10 @@ _logger = logging.getLogger(__name__)
 class account_analytic_project(models.Model):
     _inherit = 'account.analytic.account'
 
-    type = fields.Selection([('view', 'Analytic view'), ('normal', 'Analytic account'), ('contract', 'Contract or Project'), ('template', 'Contract template')], string='Account type', help='Select the appropriate type for this analytical account.')
+    type = fields.Selection([('view', 'Analytic view'), ('normal', 'Analytic account'), ('contract', 'Contract or Project'), ('template', 'Contract template')], default="normal", string='Account type',
+                            help='Select the appropriate type for this analytical account.', required=True)
     manager_id = fields.Many2one('hr.employee', string='Contract manager', help='The manager responsible for this contract.', required=True)
-    company_id = fields.Many2one('res.company', string='Company', default=lambda self: self.env['res.company']._company_default_get('account.analytic.account'))
+    company_id = fields.Many2one('res.company', string='Company', default=lambda self: self.env['res.company']._company_default_get('account.analytic.account'), required=True)
     date_start = fields.Date(string="Start date", help='Start date of the project.')
     date_stop = fields.Date(string="Stop date", help='Project completion date.')
     notes = fields.Text(string="Notes", help='Space for a short note, description, project tasks.')
@@ -24,26 +25,27 @@ class account_analytic_project(models.Model):
         ('close', 'Closed'),
         ('cancelled', 'Cancelled')], 'Status', default="draft", required=True, track_visibility='onchange', copy=False)
 
-    @api.constrains("date_start", "date_stop")
+    @api.constrains("name", "partner_id", "date_start", "date_stop")
     def _add_project(self):
         for rec in self:
-            print(rec.project_id)
-            print(rec.name, rec.manager_id, rec.date_start, rec.date_stop)
-            if not rec.project_id:
+            if not rec.project_id and (rec.type == 'contract'):
                 print("HERE")
                 self.project_id = self.env["project.project"].create({
                     'name': rec.name,
                     'user_id': self.env.user.id,
                     'date_start': rec.date_start,
                     'date': rec.date_stop,
+                    'analytic_account_id': rec.id,
+                    'partner_id': rec.partner_id.id,
                 })
 
-            elif rec.name or rec.manager_id or rec.date_start or rec.date_stop:
+            elif rec.name or rec.partner_id or rec.manager_id or rec.date_start or rec.date_stop:
                 print("THERE")
                 self.project_id.write({
                     'name': rec.name,
                     'date_start': rec.date_start,
                     'date': rec.date_stop,
+                    'partner_id': rec.partner_id.id,
                 })
 
     def action_template(self):
