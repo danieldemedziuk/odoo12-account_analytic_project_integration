@@ -17,13 +17,17 @@
 <!--                </xpath>-->
 
                 <group name="main">
-                    <group>
+                    <group name="part-1">
+                        <field name="manager_id" options="{'no_create': True, 'no_create_edit':True}"/>
                         <field name="date_start"/>
                         <field name="date_stop"/>
-                        <field name="notes"/>
+                    </group>
+                    <group name="part-2">
                         <field name="type"/>
-                        <field name="manager_id" options="{'no_create': True, 'no_create_edit':True}"/>
                         <field name="company_id" options="{'no_create': True, 'no_create_edit':True}"/>
+                    </group>
+                    <group name="part-3">
+                        <field name="notes"/>
                     </group>
                 </group>
             </field>
