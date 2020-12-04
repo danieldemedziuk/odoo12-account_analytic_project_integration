@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-27 12:18+0000\n"
-"PO-Revision-Date: 2020-11-27 12:18+0000\n"
+"POT-Creation-Date: 2020-12-04 08:56+0000\n"
+"PO-Revision-Date: 2020-12-04 08:56+0000\n"
 "Last-Translator: DanielDemedziuk <daniel.demedziuk@mjgroup.pl>, 2020\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -38,6 +38,16 @@ msgid "Analytic view"
 msgstr "Widok analityczny"
 
 #. module: account_analytic_project_integration
+#: selection:account.analytic.account,state:0
+msgid "Cancelled"
+msgstr "Anulowane"
+
+#. module: account_analytic_project_integration
+#: selection:account.analytic.account,state:0
+msgid "Closed"
+msgstr "Zamknięte"
+
+#. module: account_analytic_project_integration
 #: model:ir.model.fields,field_description:account_analytic_project_integration.field_account_analytic_account__company_id
 msgid "Company"
 msgstr "Firma"
@@ -58,9 +68,24 @@ msgid "Contract template"
 msgstr "Szablon umowy"
 
 #. module: account_analytic_project_integration
+#: selection:account.analytic.account,state:0
+msgid "In Progress"
+msgstr "W toku"
+
+#. module: account_analytic_project_integration
+#: selection:account.analytic.account,state:0
+msgid "New"
+msgstr "Nowe"
+
+#. module: account_analytic_project_integration
 #: model:ir.model.fields,field_description:account_analytic_project_integration.field_account_analytic_account__notes
 msgid "Notes"
 msgstr "Notatki"
+
+#. module: account_analytic_project_integration
+#: model:ir.model.fields,field_description:account_analytic_project_integration.field_account_analytic_account__project_id
+msgid "Project"
+msgstr "Projekt"
 
 #. module: account_analytic_project_integration
 #: model:ir.model.fields,help:account_analytic_project_integration.field_account_analytic_account__date_stop
@@ -88,12 +113,27 @@ msgid "Start date of the project."
 msgstr "Data rozpoczęcia projektu."
 
 #. module: account_analytic_project_integration
+#: model:ir.model.fields,field_description:account_analytic_project_integration.field_account_analytic_account__state
+msgid "Status"
+msgstr ""
+
+#. module: account_analytic_project_integration
 #: model:ir.model.fields,field_description:account_analytic_project_integration.field_account_analytic_account__date_stop
 msgid "Stop date"
 msgstr "Data zakończenia"
 
 #. module: account_analytic_project_integration
+#: selection:account.analytic.account,state:0
+msgid "Template"
+msgstr "Szablon"
+
+#. module: account_analytic_project_integration
 #: model:ir.model.fields,help:account_analytic_project_integration.field_account_analytic_account__manager_id
 msgid "The manager responsible for this contract."
 msgstr "Menedżer odpowiedzialny za ten kontrakt."
+
+#. module: account_analytic_project_integration
+#: selection:account.analytic.account,state:0
+msgid "To Renew"
+msgstr "Do odnowienia"
 
