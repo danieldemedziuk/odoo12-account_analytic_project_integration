@@ -29,7 +29,6 @@ class account_analytic_project(models.Model):
     def _add_project(self):
         for rec in self:
             if not rec.project_id and (rec.type == 'contract'):
-                print("HERE")
                 self.project_id = self.env["project.project"].create({
                     'name': rec.name,
                     'user_id': self.env.user.id,
@@ -40,7 +39,6 @@ class account_analytic_project(models.Model):
                 })
 
             elif rec.name or rec.partner_id or rec.manager_id or rec.date_start or rec.date_stop:
-                print("THERE")
                 self.project_id.write({
                     'name': rec.name,
                     'date_start': rec.date_start,
